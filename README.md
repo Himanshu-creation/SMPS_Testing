@@ -35,13 +35,22 @@ To scale ~40V to 3.3V for ADC input:
 R1 = 39kΩ, R2 = 3.3kΩ
 Vout = Vin × (R2 / (R1 + R2))
 
-## Web Interface (Optional)
+## Web Interface
 
-If enabled in the ESP32 firmware, access your ESP32’s IP to:
-- Toggle individual relays
-- Monitor SMPS voltages
-- View ON/OFF duration
-- View cycle count
+The entire system is controlled through a **web interface hosted on the ESP32-S3**. Once powered and connected to Wi-Fi, the ESP32 serves a webpage accessible via its local IP address.
+
+Features of the Web Interface:
+
+- Toggle each of the 8 SMPS relays manually  
+- View real-time **voltage output** of each SMPS  
+- Configure **ON time** and **OFF delay** for auto toggle cycle  
+- Start/Stop **automated cycling** of each SMPS  
+- Display **ON/OFF cycle count** for every relay  
+- Live display of **temperature readings** from the MAX31856 thermocouple  
+
+Simply connect to the same Wi-Fi network as your ESP32, and access the IP address shown in the Serial Monitor after boot-up.
+
+
 
 ---
 ## Getting Started
